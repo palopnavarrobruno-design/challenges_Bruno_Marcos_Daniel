@@ -11,6 +11,6 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build Docker image
       run: docker build -t miapp .
+      working-directory: ./challenge11 # Se debe especificar el directorio al construit el docker
     - name: Run container
       run: docker run --rm miapp
-      working-directory: ./challenge11
