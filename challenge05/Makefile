@@ -1,0 +1,15 @@
+CC=gcc
+CFLAGS=-Wall -Wextra -Werror
+TARGET=starter
+TEST_TARGET=test_challenge05
+
+all: test clean $(TARGET) # Primero ejecuta el test, si pasa el clean y luego el TARGET
+
+$(TARGET): starter.c
+	$(CC) $(CFLAGS) -o $(TARGET) starter.c
+
+test:
+	bash run_tests.sh
+
+clean:
+	rm -f $(TARGET) $(TEST_TARGET)
