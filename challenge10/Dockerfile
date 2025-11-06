@@ -1,5 +1,5 @@
 FROM gcc:latest
 WORKDIR /app
-COPY . .
-RUN make all
+COPY ./app .
+RUN make
 ENTRYPOINT ["./app"]
