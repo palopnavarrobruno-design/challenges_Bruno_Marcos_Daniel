@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-int pruebas();
-
 
 extern int suma(int a, int b) {
 
@@ -13,9 +11,17 @@ extern int suma(int a, int b) {
 
 }
 
+
+#if EXISTS == 1
+  void pruebas();
+#endif
+
+
 int main() {
 
+    #if EXISTS == 1
     pruebas();
+    #endif
 
     return 0;
 

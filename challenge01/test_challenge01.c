@@ -2,7 +2,7 @@
 
 int suma(int a, int b);
 
-extern int pruebas() {
+extern void pruebas() {
 
     assert(5 == suma(2, 3));
 
