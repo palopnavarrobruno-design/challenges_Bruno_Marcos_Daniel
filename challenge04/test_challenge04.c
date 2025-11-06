@@ -7,7 +7,7 @@ int multiplicacion(int a, int b);
 int division(int a, int b);
 
 
-extern int tests() {
+extern void tests() {
 
 
     assert(30 == multiplicacion(-5, -6));

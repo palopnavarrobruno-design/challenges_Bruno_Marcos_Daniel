@@ -22,5 +22,5 @@ fclean: clean
 re: fclean all
 
 test: $(SRCS) test_challenge04.c
-	$(CC) $(CFLAGS) -o $(TEST) $(SRCS) test_challenge04.c
+	$(CC) $(CFLAGS) -DEXISTS=1 -o $(TEST) $(SRCS) test_challenge04.c
 	./$(TEST)

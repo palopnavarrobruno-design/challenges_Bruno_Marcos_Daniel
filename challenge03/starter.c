@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stddef.h>
 
-int pruebas();
-
 size_t mi_strlen(const char *s) {
 
     size_t i = 0;
@@ -13,6 +11,7 @@ size_t mi_strlen(const char *s) {
 
     }
 
+    printf("%zu \n", i);
     return i;
 
 }
@@ -54,15 +53,22 @@ char *mi_strcpy(char *dest, const char *src) {
 
     dest[i] = '\0';
 
-    printf("%s", dest);
     return dest;
 
 }
 
 
+#if EXISTS == 1
+  void pruebas();
+#endif
+
+
 int main() {
     
+  #if EXISTS == 1
     pruebas();
-    
+  #endif
+
+
     return 0;
 }

@@ -1,11 +1,6 @@
 #include <stdio.h>
 
 
-int tests();
-
-
-int r1;
-
 extern int suma(int a, int b) {
 
     int resultado;
@@ -56,13 +51,17 @@ extern int division(int a, int b) {
 }
 
 
+#if EXISTS == 1
+  void pruebas();
+#endif
+
 
 int main() {
     
-    printf("Calculadora inicializada.\n");
+  #if EXISTS == 1
+    pruebas();
+  #endif
 
-    int status = tests();
-
-    return 0;
+  return 0;
 
 }
